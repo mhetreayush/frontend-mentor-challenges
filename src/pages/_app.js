@@ -1,9 +1,10 @@
 import "@/styles/globals.css";
-import Header from "@/components/Header";
+import GoToHome from "@/components/GoToHome";
 export default function App({ Component, pageProps }) {
+  const pathName = window.location.pathname === "/" ? true : false;
   return (
     <>
-      {/* <Header /> */}
+      {!pathName && <GoToHome />}
       <Component {...pageProps} />
     </>
   );
